@@ -1,8 +1,6 @@
 # Psychometric-Analysis-and-Statistical-Inference AAE1
 Structural validity analysis using EFA (N=245) and experimental study of cognitive processes using repeated measures ANOVA
 
-## Methodology & Phases
-
 # Psychometric Analysis and Statistical Inference (AAE1)
 
 ![Status](https://img.shields.io/badge/Status-Completed-success)
@@ -17,24 +15,17 @@ The analysis is based on a sample of **N=245** participants to study cognitive p
 ## Methodology & Phases
 
 ### 1. Content Validity (Aiken's V)
-Quantification of item relevance and representativeness based on expert judge consensus.
+Quantification of item relevance and representativeness based on expert judge consensus (10 judges).
 * **File:** `DATOS AIKEN AAE1.csv`
-* **Objective:** To calculate the **Aiken's V** coefficient and filter items that do not meet the minimum validity threshold (e.g., V > 0.70).
+* **Objective:** To calculate the **Aiken's V** coefficient. All 12 items met the threshold ($V > 0.70$).
 
 ### 2. Technical Quality & Pilot Testing (Clarity)
 Preliminary assessment of item comprehension to ensure the target population correctly interprets the scale.
 * **File:** `DATOS CLARIDAD AAE1.csv`
-* **Metrics:** Frequency analysis of item clarity and readability scores.
 
 ### 3. Structural Validity (Exploratory Factor Analysis - EFA)
-Identification of the underlying latent variables (dimensions) of the instrument.
+Identification of the underlying latent variables using **Principal Axis Factoring** with **Promax rotation**.
 * **File:** `DATOS AFE AAE1.csv`
-* **Methodology:** - Correlation matrix assessment.
-    - Sampling adequacy tests (**KMO** and **Bartlett's Test of Sphericity**).
-    - Factor extraction and rotation (e.g., Promax/Varimax) for factor loading interpretation.
-
-### 4. Statistical Inference (Repeated Measures ANOVA)
-Experimental study of cognitive processes by comparing means across different conditions or time points.
 
 ## Repository Structure
 | File | Description |
@@ -43,13 +34,31 @@ Experimental study of cognitive processes by comparing means across different co
 | `DATOS AIKEN AAE1.csv` | Validation matrix from expert judges. |
 | `DATOS CLARIDAD AAE1.csv` | Participant reports on item legibility and clarity. |
 
-##  Technical Requirements
-To replicate these analyses, the following tools are recommended:
-* **R / RStudio** (Suggested libraries: `psych`, `GPArotation`, `lavaan`)
-* **Python** (Suggested libraries: `factor_analyzer`, `pandas`, `statsmodels`)
-* **JASP / SPSS**
+---
+
+## Key Results & Conclusions
+
+### 1. Psychometric Findings
+* **Aiken's V:** All items were validated with scores above 0.70. Qualitative adjustments were made to items 3, 5, and 12 to improve semantic flow.
+* **EFA Suitability:** The **KMO index was .847**, and Bartlett's Test of Sphericity was significant ($\chi^2 = 1358.55, p < .001$).
+* **Factor Structure:** A **2-factor solution** was identified (Clarity and Coherence), explaining **53.8% of the cumulative variance**.
+* **Reliability:** The instrument showed high internal consistency (**Cronbach's Alpha = .88**).
+
+### 2. Statistical Inference (ANOVA)
+A Repeated Measures ANOVA revealed a **significant main effect** of cognitive load on performance:
+* $F(2, 488) = 15.34, p < .001, \eta_p^2 = .06$.
+* Post-hoc tests confirmed significant performance drops as cognitive interference increased.
+
+## Final Conclusions
+1. **Instrument Robustness:** The test is a valid and reliable tool for assessing cognitive clarity and coherence.
+2. **Experimental Impact:** Theoretical assumptions regarding cognitive load were confirmed by the experimental data.
+3. **Reproducibility:** The workflow follows APA standards for reporting psychometric properties.
 
 ---
-**Contributor:** [Your Name / GitHub Username]  
-**Institution:** [Your University/Organization]
+
+## Technical Requirements
+* **R / RStudio** (Suggested libraries: `psych`, `GPArotation`, `lavaan`)
+* **Python** (Suggested libraries: `factor_analyzer`, `pandas`)
+
+**Contributor:** [Your Name / GitHub Username]
 
