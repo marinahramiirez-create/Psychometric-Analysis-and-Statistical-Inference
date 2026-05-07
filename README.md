@@ -52,11 +52,4 @@ A Repeated Measures ANOVA revealed a **significant main effect** of cognitive lo
 2. **Experimental Impact:** Theoretical assumptions regarding cognitive load were confirmed by the experimental data.
 3. **Reproducibility:** The workflow follows APA standards for reporting psychometric properties.
 
----
-
-## Technical Requirements
-* **R / RStudio** (Suggested libraries: `psych`, `GPArotation`, `lavaan`)
-* **Python** (Suggested libraries: `factor_analyzer`, `pandas`)
-
-**Contributor:** [Your Name / GitHub Username]
 
