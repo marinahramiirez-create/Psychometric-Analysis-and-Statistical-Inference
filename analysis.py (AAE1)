@@ -1,0 +1,26 @@
+import pandas as pd
+from factor_analyzer import FactorAnalyzer
+
+def run_efa_analysis(file_path):
+    df = pd.read_csv(file_path)
+    
+    # Eliminamos columnas no numéricas si las hay
+    df_numeric = df.select_dtypes(include=['number'])
+
+    print("--- AAE1: Exploratory Factor Analysis ---")
+    
+    # Realizamos el AFE con 2 factores 
+    fa = FactorAnalyzer(n_factors=2, rotation='oblimin', method='principal')
+    fa.fit(df_numeric)
+    
+    # Obtener cargas factoriales
+    loadings = fa.loadings_
+    print("\n[Factor Loadings Matrix Summary]")
+    print(pd.DataFrame(loadings, index=df_numeric.columns, columns=['Factor 1', 'Factor 2']).head(10))
+
+    # Varianza
+    ev, v = fa.get_factor_variance()
+    print(f"\nTotal Cumulative Variance: {v[2]*100:.2f}%")
+
+if __name__ == "__main__":
+    run_efa_analysis('DATOS AFE AAE1.csv')
