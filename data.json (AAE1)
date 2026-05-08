@@ -1,0 +1,23 @@
+{
+  "project_name": "QAEP - Factor Structure Validation",
+  "instrument": "Questionnaire for Assessing Educational Podcasts",
+  "sample_size": 245,
+  "adequacy_stats": {
+    "kmo": 0.868,
+    "bartlett_sig": "<.001"
+  },
+  "factor_structure": {
+    "extraction_method": "Principal Axis Factoring",
+    "rotation_method": "Oblimin",
+    "total_variance_explained": 53.8,
+    "factors": {
+      "Factor_1": "Content/Clarity",
+      "Factor_2": "Technical Coherence"
+    }
+  },
+  "content_validity": {
+    "method": "Aiken's V",
+    "experts_count": 10,
+    "threshold_met": true
+  }
+}
