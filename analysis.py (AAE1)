@@ -9,7 +9,7 @@ def run_efa_analysis(file_path):
 
     print("--- AAE1: Exploratory Factor Analysis ---")
     
-    # Realizamos el AFE con 2 factores 
+    # Realizamos el AFE con 2 factores (según tu informe)
     fa = FactorAnalyzer(n_factors=2, rotation='oblimin', method='principal')
     fa.fit(df_numeric)
     
